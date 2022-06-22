@@ -1,6 +1,6 @@
 import Navbar from "./components/Navbar";
-
-const aboutText = "Moin Muchacho! Wir sind Marbossa & Deko und sind bekannt für Gameplay voller Emotionen. Was das bedeutet darfst du gerne selber rausfinden. Wir zocken am meisten GTA V, Rainbow Six: Siege & Warzone!";
+import { useParams } from "react-router-dom";
+import Config from "./config.json";
 
 export default function WebContent() {    
     return (
@@ -14,7 +14,7 @@ export default function WebContent() {
                     <div id="bottom-container">
                         <div className="flex-container align-center justify-center">
                             <div className="page-section-inner">
-                                <div className="about-text">{aboutText}</div>
+                                <div className="about-text">{Config.aboutText}</div>
                             </div>
                         </div>
                     </div>
@@ -22,4 +22,12 @@ export default function WebContent() {
             </section>
         </>)
     );
+}
+
+export function RedirectPage() {
+    const params = useParams();
+    const route = params.route;
+    const url = Config.routes[route];
+    if (url) window.location.href = url;
+    else window.location.href = "/";
 }
