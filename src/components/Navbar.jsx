@@ -18,7 +18,8 @@ export default function Navbar() {
                         <img className="navbar-logo" src="logo.png" alt="MuchachoArmy Logo" />
                     </a>
                     <nav id="navbar-nav-items" className="flex-container align-center">
-                        <NavbarItem text="Discord" link="/discord" />
+                        <NavbarItem text="Clan Discord" link="/clan-discord" />
+                        <NavbarItem text="Community Discord" link="/community-discord" />
                         <NavbarItem text="YouTube" link="/youtube" />
                         <NavbarItem text="Twitch" link="/twitch" />
                         <NavbarItem text="Merch" link="/merch" />
@@ -27,4 +28,4 @@ export default function Navbar() {
             </header>
         </>
     );
-}
+}Ö
