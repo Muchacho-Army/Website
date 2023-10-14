@@ -4,7 +4,7 @@ function NavbarItem(props) {
     const { text, link } = props;
 
     return (
-        <a className="nav-item" href={link}>{text}</a>
+        <a className="nav-item" href={link} target="_blank">{text}</a>
     );
 }
 
