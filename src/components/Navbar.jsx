@@ -2,10 +2,9 @@ import "./Navbar.scss";
 
 function NavbarItem(props) {
     const { text, link } = props;
-    const openInNewTab = url => window.open(url, '_blank', 'noopener, noreferrer');
 
     return (
-        <div className="nav-item" onClick={() => openInNewTab(link)} >{text}</div>
+        <a className="nav-item" href={link}>{text}</a>
     );
 }
 
